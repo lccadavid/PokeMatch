@@ -31,8 +31,8 @@ end
 Entonces(/^debo ver "(.*?)" imagenes ocultas$/) do |num_imagenes|
   document = Webrat::XML.html_document(response)
   columnas_cont = 0
-  document.xpath("//table[@id='tablero']/tr").each do |fila|
-    fila.xpath("./td").each do |columna|
+  document.xpath("//table[@id='tablero']/tr").each_with_index do |fila, index|
+    fila.xpath("./td").each_with_index do |columna, index|
       columnas_cont+=1
     end
   end
@@ -43,14 +43,6 @@ Dado(/^que gane el juego$/) do
   visit '/gano'
 end
 
-Entonces(/^quiero ver "(.*?)"$/) do |text|
-  last_response.body.should =~ /#{text}/m
-end
-
 Dado(/^que perdi el juego$/) do
   visit '/perdio'
-end
-
-Entonces(/^necesito ver "(.*?)"$/) do |text|
-  last_response.body.should =~ /#{text}/m
 end

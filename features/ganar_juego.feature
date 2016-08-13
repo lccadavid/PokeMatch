@@ -7,4 +7,4 @@ Característica:
 
   Escenario: quiero ver un titulo de ganar
     Dado que gane el juego
-    Entonces quiero ver "Felicitaciones ganaste"
+    Entonces debo ver "Felicitaciones ganaste"

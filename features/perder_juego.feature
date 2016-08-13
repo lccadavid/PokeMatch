@@ -7,4 +7,4 @@ Característica:
 
   Escenario: quiero ver un titulo de perder
     Dado que perdi el juego
-    Entonces necesito ver "Perdiste el juego"
+    Entonces debo ver "Perdiste el juego"
