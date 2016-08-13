@@ -7,18 +7,22 @@
   <body>
     <h1>Nivel facil!</h1>
 
+    <form action="/seleccionar" method="post">
+
     <table id="tablero">
       <% session["pokematch"].pokemones_encontrado.each_with_index do |fila, i| %>
         <tr>
           <% fila.each_with_index do |columna, j| %>
             <td>
-              <a id=<%= "#{i}-#{j}" %> href="#">
-                <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-              </a>
+              <button id=<%= "#{i}-#{j}" %> name='xy' value="<%= "#{i}-#{j}" %>" >
+                <img src=<%= "images/#{columna}.jpg" %> id=<%= "#{i}-#{j}" %> name=<%= "#{i}-#{j}" %> alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px" />
+              </button>
             </td>
           <% end %>
         </tr>
        <% end %>
     </table>
+
+    </form>
   </body>
 </html>

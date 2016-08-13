@@ -32,7 +32,7 @@ Entonces(/^debo ver "(.*?)" imagenes ocultas$/) do |num_imagenes|
   document = Webrat::XML.html_document(response)
   columnas_cont = 0
   document.xpath("//table[@id='tablero']/tr").each_with_index do |fila, index|
-    fila.xpath("./td/a/img").each_with_index do |columna, index|
+    fila.xpath("./td/button/img").each_with_index do |columna, index|
       columnas_cont+=1
     end
   end
@@ -64,7 +64,7 @@ Entonces(/^el resultado debe ser "(.*?)"$/) do |resultado|
 end
 
 Cuando(/^selecciono el el pokemon en la posicion "(.*?)","(.*?)"$/) do |x, y|
-   #click_link("#{x}-#{y}")
+   click_link("#{x}-#{y}")
 end
 
 
@@ -73,6 +73,6 @@ Entonces(/^debo ver el pokemon "(.*?)"$/) do |pokemon|
 end
 
 Entonces(/^debo ver el pokemon "(.*?)" oculto$/) do |arg1|
-  #last_response.body.should =~ "pikachu"
+    clast_response.body.should =~ "pikachu"
 end
 

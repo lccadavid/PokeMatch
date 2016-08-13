@@ -14,7 +14,4 @@ Característica:
     Dado ingreso al juego
     Entonces debo ver "20" imagenes ocultas
 
-    # Escenario: Quiero ver el pokemon seleccionado
-    #   Dado ingreso al juego
-    #   Cuando selecciono el el pokemon en la posicion "0","0"
-    #   Entonces debo ver el pokemon "pikachu"
+

@@ -5,6 +5,3 @@ Característica:
   Quiero ver una pantalla donde dice que perdi
   Para terminar el juego
 
-  Escenario: quiero ver un titulo de perder
-    Dado que perdi el juego
-    Entonces debo ver "Perdiste el juego"
