@@ -11,4 +11,4 @@ Característica:
 
   Escenario: quiero ingresar al juego
     Dado que abri la pagina
-    Entonces debo ver "iniciar"
+    Entonces debo ver "Bienvenido a PokeMatch"
