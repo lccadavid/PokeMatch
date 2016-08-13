@@ -1,5 +1,9 @@
 require 'sinatra'
 
 get '/juego' do
-  erb :juego  
+  erb :juego
+end
+
+get '/' do
+    erb :index
 end
