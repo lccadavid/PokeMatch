@@ -46,3 +46,21 @@ end
 Dado(/^que perdi el juego$/) do
   visit '/perdio'
 end
+
+Entonces(/^necesito ver "(.*?)"$/) do |text|
+  last_response.body.should =~ /#{text}/m
+end
+
+Dado(/^que tuve "(.*?)"$/) do |intentos|
+  visit '/gano'
+  visit '/perdio'
+  last_response.body.should =~ /#{intentos}/m
+end
+
+Entonces(/^el resultado debe ser "(.*?)"$/) do |resultado|
+  visit '/gano'
+  visit '/perdio'
+  last_response.body.should =~ /#{resultado}/m
+end
+
+
