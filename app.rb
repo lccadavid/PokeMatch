@@ -8,6 +8,10 @@ get '/gano' do
   erb :gano
 end
 
+get '/perdio' do
+  erb :perdio
+end
+
 get '/' do
     erb :index
 end
