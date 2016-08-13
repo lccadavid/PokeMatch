@@ -17,3 +17,11 @@ end
 Entonces(/^debo ver "(.*?)"$/) do |text|
   last_response.body.should =~ /#{text}/m
 end
+
+Dado(/^que gane el juego$/) do
+  visit '/gano'
+end
+
+Entonces(/^quiero ver "(.*?)"$/) do |text|
+  last_response.body.should =~ /#{text}/m
+end
