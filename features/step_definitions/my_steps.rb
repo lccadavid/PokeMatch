@@ -32,7 +32,7 @@ Entonces(/^debo ver "(.*?)" imagenes ocultas$/) do |num_imagenes|
   document = Webrat::XML.html_document(response)
   columnas_cont = 0
   document.xpath("//table[@id='tablero']/tr").each_with_index do |fila, index|
-    fila.xpath("./td").each_with_index do |columna, index|
+    fila.xpath("./td/a/img").each_with_index do |columna, index|
       columnas_cont+=1
     end
   end
