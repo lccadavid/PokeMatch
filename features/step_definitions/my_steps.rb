@@ -38,3 +38,11 @@ Entonces(/^debo ver "(.*?)" imagenes ocultas$/) do |num_imagenes|
   end
   columnas_cont.should == num_imagenes.to_i
 end
+
+Dado(/^que gane el juego$/) do
+  visit '/gano'
+end
+
+Entonces(/^quiero ver "(.*?)"$/) do |text|
+  last_response.body.should =~ /#{text}/m
+end
