@@ -1,5 +1,5 @@
 require 'sinatra'
 
-get '/' do
-    
+get '/juego' do
+  erb :juego  
 end
