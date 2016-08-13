@@ -3,6 +3,8 @@ require './lib/pokematch'
 enable :sessions
 
 get '/juego' do
+  pokematch = PokeMatch.new
+  session['pokematch'] = pokematch
   erb :juego
 end
 

@@ -8,114 +8,17 @@
     <h1>Nivel facil!</h1>
 
     <table id="tablero">
-      <tr>
-          <td>
-            <a id="1-1" href="#">
-              <img src="images/pikachu.jpg" alt="pichu" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-          <td>
-            <a href="#">
-            <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-          </a>
-          </td>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-      </tr>
-      <tr>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-          <td>
-            <a href="#">
-            <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-          </a>
-          </td>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-      </tr>
-      <tr>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-          <td>
-            <a href="#">
-            <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-          </a>
-          </td>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-      </tr>
-      <tr>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-          <td>
-            <a href="#">
-            <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-          </a>
-          </td>
-          <td>
-            <a href="#">
-              <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
-            </a>
-          </td>
-      </tr>
+      <% session["pokematch"].pokemones_encontrado.each_with_index do |fila, i| %>
+        <tr>
+          <% fila.each_with_index do |columna, j| %>
+            <td>
+              <a id=<%= "#{i}-#{j}" %> href="#">
+                <img src="images/poke_bola.jpg" alt="Memory Card" width="96" height="96" style="margin:0 0 0 0px">
+              </a>
+            </td>
+          <% end %>
+        </tr>
+       <% end %>
     </table>
   </body>
 </html>

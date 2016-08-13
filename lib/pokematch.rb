@@ -7,10 +7,18 @@ class PokeMatch
     ["venonat","rattata","caterpie","pikachu","venonat"]
   ]
 
-  attr_reader :intentos
+
+
+  attr_reader :intentos, :pokemones_encontrado
 
   def initialize
     @intentos = 3
+    @pokemones_encontrado = [
+      ["poke_bola", "poke_bola", "poke_bola", "poke_bola", "poke_bola"],
+      ["poke_bola", "poke_bola", "poke_bola", "poke_bola", "poke_bola"],
+      ["poke_bola", "poke_bola", "poke_bola", "poke_bola", "poke_bola"],
+      ["poke_bola", "poke_bola", "poke_bola", "poke_bola", "poke_bola"],
+    ]
   end
 
 
