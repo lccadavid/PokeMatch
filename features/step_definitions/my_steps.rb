@@ -46,7 +46,6 @@ end
 Entonces(/^quiero ver "(.*?)"$/) do |text|
   last_response.body.should =~ /#{text}/m
 end
-<<<<<<< HEAD
 
 Dado(/^que perdi el juego$/) do
   visit '/perdio'
