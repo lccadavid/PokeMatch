@@ -11,4 +11,4 @@ Característica:
 
   Escenario: quiero ingresar al juego
     Dado que abri la pagina
-    Entonces debo ver "Iniciar juego"
+    Entonces debo ver "iniciar_juego"
