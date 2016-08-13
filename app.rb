@@ -1,4 +1,5 @@
 require 'sinatra'
+require './lib/pokematch'
 enable :sessions
 
 get '/juego' do
@@ -12,8 +13,9 @@ get '/gano' do
 end
 
 get '/perdio' do
-  session['intentos'] = '3'
-  session['resultado'] = '50'
+  pokematch = PokeMatch.new
+  session['intentos'] = pokematch.get_intentos
+  session['resultado'] = pokematch.get_resultado
   erb :perdio
 end
 
