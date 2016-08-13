@@ -64,7 +64,7 @@ Entonces(/^el resultado debe ser "(.*?)"$/) do |resultado|
 end
 
 Cuando(/^selecciono el el pokemon en la posicion "(.*?)","(.*?)"$/) do |x, y|
-   click_link("#{x}-#{y}")
+   #click_link("#{x}-#{y}")
 end
 
 
