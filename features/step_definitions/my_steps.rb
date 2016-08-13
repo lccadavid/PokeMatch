@@ -63,4 +63,10 @@ Entonces(/^el resultado debe ser "(.*?)"$/) do |resultado|
   last_response.body.should =~ /#{resultado}/m
 end
 
+Cuando(/^selecciono el el pokemon en la posicion "(.*?)","(.*?)"$/) do |x, y|
+   click_link("#{x}-#{y}")
+end
 
+Entonces(/^debo ver el pokemon "(.*?)"$/) do |pokemon|
+    last_response.body.should =~ /#{pokemon}/m
+end

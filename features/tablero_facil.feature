@@ -13,3 +13,8 @@ Característica:
   Escenario: Quiero ver las imagenes de los pokemones ocultas
     Dado ingreso al juego
     Entonces debo ver "20" imagenes ocultas
+
+    Escenario: Quiero ver el pokemon seleccionado
+      Dado ingreso al juego
+      Cuando selecciono el el pokemon en la posicion "1","1"
+      Entonces debo ver el pokemon "pikachu"
