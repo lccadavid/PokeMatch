@@ -1,5 +1,12 @@
 class PokeMatch
 
+  pokemones=[
+    ["pikachu", "ekans", "charmander", "paras", "nidoran"],
+    ["charmander","ekans","caterpie","rattata","spearow"],
+    ["nidoran","paras","clefairy","spearow","clefairy"],
+    ["venonat","rattata","caterpie","pikachu","venonat"]
+  ]
+
   attr_reader :intentos
 
   def initialize
