@@ -67,6 +67,12 @@ Cuando(/^selecciono el el pokemon en la posicion "(.*?)","(.*?)"$/) do |x, y|
    click_link("#{x}-#{y}")
 end
 
+
 Entonces(/^debo ver el pokemon "(.*?)"$/) do |pokemon|
     last_response.body.should =~ /#{pokemon}/m
 end
+
+Entonces(/^debo ver el pokemon "(.*?)" oculto$/) do |arg1|
+  last_response.body.should =~ "pikachu"
+end
+
